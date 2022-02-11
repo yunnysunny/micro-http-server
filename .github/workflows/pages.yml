@@ -1,0 +1,41 @@
+name: Pages
+
+on:
+  push:
+    branches:
+      - master  # default branch
+    paths:
+      - "readme.md"
+      - "readme-cn.md"
+      - ".github/workflows/pages.yml"
+      - "doc.json"
+      - "package.json"
+
+jobs:
+  pages:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js 16.x
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+      - name: Cache NPM dependencies
+        uses: actions/cache@v2
+        with:
+          path: node_modules
+          key: ${{ runner.OS }}-npm-cache
+          restore-keys: |
+            ${{ runner.OS }}-npm-cache
+      - name: Install Dependencies
+        run: npm i markdown-to-html-cli -g
+      - name: Build
+        run: |
+          mkdir -p docs
+          markdown-to-html --source readme.md --output docs/index.html
+          markdown-to-html --source readme-cn.md --output docs/index-zh.html
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs
