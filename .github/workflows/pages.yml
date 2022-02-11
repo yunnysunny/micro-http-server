@@ -5,15 +5,16 @@ on:
     branches:
       - master  # default branch
     paths:
-      - "readme.md"
-      - "readme-cn.md"
+      - "benchmark/**"
       - ".github/workflows/pages.yml"
-      - "doc.json"
       - "package.json"
 
 jobs:
-  pages:
+  benchmark:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        framework: ["native", "mhs", "koa", "express"]
     steps:
       - uses: actions/checkout@v2
       - name: Use Node.js 16.x
@@ -24,18 +25,30 @@ jobs:
         uses: actions/cache@v2
         with:
           path: node_modules
-          key: ${{ runner.OS }}-npm-cache
-          restore-keys: |
-            ${{ runner.OS }}-npm-cache
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/yarn.lock') }}          
       - name: Install Dependencies
-        run: npm i markdown-to-html-cli -g
-      - name: Build
+        run: yarn install
+      - name: Benchmark framework ${{ matrix.framework }}
         run: |
-          mkdir -p docs
-          markdown-to-html --source readme.md --output docs/index.html
-          markdown-to-html --source readme-cn.md --output docs/index-zh.html
+          mkdir -p /tmp/result/${{ matrix.framework }} /tmp/output/${{ matrix.framework }} /tmp/reporter
+          node benchmark/frameworks/${{ matrix.framework }}.js
+          PID=$!
+
+          PWD=`pwd`
+          docker run --name bench --rm --network host \
+          -v ${PWD}/jmeter/http.jmx:/config/http.jmx \
+          -v ${PWD}/jmeter/entrypoint.sh:/entrypoint.sh \
+          -e FRAMEWORK=${{ matrix.framework }} \
+          yunnysunny/jmeter:latest
+          kill $PID
+
+  pages:
+    needs: benchmark
+    runs-on: ubuntu-latest
+    steps:
+
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./docs
+          publish_dir: /tmp/reporter
