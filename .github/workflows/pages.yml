@@ -30,14 +30,15 @@ jobs:
         run: yarn install
       - name: Benchmark framework ${{ matrix.framework }}
         run: |
-          mkdir -p /tmp/result/${{ matrix.framework }} /tmp/output/${{ matrix.framework }} /tmp/reporter
+          mkdir -p /tmp/result/ /tmp/output/${{ matrix.framework }} /tmp/reporter
           node benchmark/frameworks/${{ matrix.framework }}.js
           PID=$!
 
           PWD=`pwd`
-          docker run --name bench --rm --network host \
-          -v ${PWD}/jmeter/http.jmx:/config/http.jmx \
-          -v ${PWD}/jmeter/entrypoint.sh:/entrypoint.sh \
+          docker run --name bench --rm --network=host \
+          -v ${PWD}/benchmark/jmeter/http.jmx:/config/http.jmx \
+          -v ${PWD}/benchmark/jmeter/entrypoint.sh:/entrypoint.sh \
+          -v /tmp:/tmp \
           -e FRAMEWORK=${{ matrix.framework }} \
           yunnysunny/jmeter:latest
           kill $PID
