@@ -9,5 +9,6 @@ PARAM_BENCH="-n -t /config/http.jmx \
 echo run "$PARAM_BENCH"
 $JMETER $PARAM_BENCH
 
-$JMETER -g "$RESULT" -e -o "$HTML"
+$JMETER -g $RESULT -e -o $HTML
+ls $HTML
 echo generate html finished
