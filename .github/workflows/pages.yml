@@ -31,7 +31,7 @@ jobs:
       - name: Benchmark framework ${{ matrix.framework }}
         run: |
           mkdir -p /tmp/result/ /tmp/output/${{ matrix.framework }} /tmp/reporter
-          node benchmark/frameworks/${{ matrix.framework }}.js
+          node benchmark/frameworks/${{ matrix.framework }}.js &
           PID=$!
 
           PWD=`pwd`
