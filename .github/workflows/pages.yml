@@ -31,7 +31,7 @@ jobs:
       - name: Benchmark framework ${{ matrix.framework }}
         run: |
           mkdir -p /tmp/result/ /tmp/output/${{ matrix.framework }} /tmp/reporter/${{ matrix.framework }}
-          nohup node benchmark/frameworks/${{ matrix.framework }}.js &
+          nohup node benchmark/frameworks/${{ matrix.framework }}.js  > nohup.log &
 
           PWD=`pwd`
           docker run --name bench --rm --network=host \
