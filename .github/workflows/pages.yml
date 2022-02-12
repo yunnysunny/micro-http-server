@@ -31,8 +31,7 @@ jobs:
       - name: Benchmark framework ${{ matrix.framework }}
         run: |
           mkdir -p /tmp/result/ /tmp/output/${{ matrix.framework }} /tmp/reporter
-          node benchmark/frameworks/${{ matrix.framework }}.js &
-          PID=$!
+          nohup node benchmark/frameworks/${{ matrix.framework }}.js &
 
           PWD=`pwd`
           docker run --name bench --rm --network=host \
@@ -41,7 +40,6 @@ jobs:
           -v /tmp:/tmp \
           -e FRAMEWORK=${{ matrix.framework }} \
           yunnysunny/jmeter:latest
-          kill $PID
 
   pages:
     needs: benchmark
