@@ -30,22 +30,42 @@ jobs:
         run: yarn install
       - name: Benchmark framework ${{ matrix.framework }}
         run: |
-          mkdir -p /tmp/result/ /tmp/output/${{ matrix.framework }} /tmp/reporter/${{ matrix.framework }}
+          mkdir -p /tmp/result/ /tmp/output/ /tmp/reporter/
           nohup node benchmark/frameworks/${{ matrix.framework }}.js  > nohup.log &
 
           PWD=`pwd`
           docker run --name bench --rm --network=host \
           -v ${PWD}/benchmark/jmeter/http.jmx:/config/http.jmx \
           -v ${PWD}/benchmark/jmeter/entrypoint.sh:/entrypoint.sh \
-          -v /tmp:/tmp \
           -e FRAMEWORK=${{ matrix.framework }} \
           yunnysunny/jmeter:latest
+
+      - name: Upload result of ${{ matrix.framework }}
+        uses: actions/upload-artifact@v2
+        with:
+          name: result-${{ matrix.framework }}
+          path: /tmp/reporter/result.html
 
   pages:
     needs: benchmark
     runs-on: ubuntu-latest
     steps:
-
+      - uses: actions/download-artifact@v2
+        with:
+          name: result-native
+          path: /tmp/reporter
+      - uses: actions/download-artifact@v2
+        with:
+          name: result-mhs
+          path: /tmp/reporter
+      - uses: actions/download-artifact@v2
+        with:
+          name: result-koa
+          path: /tmp/reporter
+      - uses: actions/download-artifact@v2
+        with:
+          name: result-express
+          path: /tmp/reporter
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
