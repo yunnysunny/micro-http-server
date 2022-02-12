@@ -8,6 +8,9 @@ on:
       - 'docs/**'
       - '**.md'
       - 'test/**'
+env:
+  NODE_ENV: production
+  LOG_LEVEL: warn
 
 jobs:
   benchmark:
@@ -44,7 +47,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: result-${{ matrix.framework }}
-          path: /tmp/reporter/result.html
+          path: /tmp/reporter
 
   pages:
     needs: benchmark

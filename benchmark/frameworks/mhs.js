@@ -3,7 +3,10 @@ const slogger = require('node-slogger');
 const Server = require('../../');
 const setup = require('../util/server_setup');
 const port = Number(process.env.LISTEN_PORT) || 3001;
-slogger.init({flushInterval:500});
+slogger.init({
+    flushInterval:500,
+    level: process.env.LOG_LEVEL || 'info',
+});
 
 const serverMhs = new Server({routers: {
     '/': function(req, res) {
