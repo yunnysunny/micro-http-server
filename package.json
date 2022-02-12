@@ -9,7 +9,12 @@
   "scripts": {
     "test": "mocha --recursive test/ --timeout 999999"
   },
-  "author": "yunnysunny",
+  "author": "yunnysunny <yunnysunny@gmail.com>",
+  "homepage": "https://github.com/yunnysunny/micro-http-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yunnysunny/micro-http-server.git"
+  },
   "license": "MIT",
   "dependencies": {
     "mime": "^2.5.2",
