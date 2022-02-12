@@ -30,7 +30,7 @@ jobs:
         run: yarn install
       - name: Benchmark framework ${{ matrix.framework }}
         run: |
-          mkdir -p /tmp/result/ /tmp/output/${{ matrix.framework }} /tmp/reporter
+          mkdir -p /tmp/result/ /tmp/output/${{ matrix.framework }} /tmp/reporter/${{ matrix.framework }}
           nohup node benchmark/frameworks/${{ matrix.framework }}.js &
 
           PWD=`pwd`
