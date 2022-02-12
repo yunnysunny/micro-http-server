@@ -2,7 +2,7 @@ const express = require('express');
 const http = require('http');
 const setup = require('../util/server_setup');
 const app = express();
-const port = Number(process.env.LISTEN_PORT) || 3000;
+const port = Number(process.env.LISTEN_PORT) || 3001;
 
 app.get('/', (req, res) => {
     res.send('Hello World');

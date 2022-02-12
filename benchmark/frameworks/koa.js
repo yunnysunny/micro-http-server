@@ -2,7 +2,7 @@ const Koa = require('koa');
 const http = require('http');
 const setup = require('../util/server_setup');
 const app = new Koa();
-const port = Number(process.env.LISTEN_PORT) || 3000;
+const port = Number(process.env.LISTEN_PORT) || 3001;
 
 app.use(async ctx => {
     ctx.body = 'Hello World';

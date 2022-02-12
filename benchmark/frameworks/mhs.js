@@ -1,7 +1,7 @@
 const http = require('http');
 const Server = require('../../');
 const setup = require('../util/server_setup');
-const port = Number(process.env.LISTEN_PORT) || 3000;
+const port = Number(process.env.LISTEN_PORT) || 3001;
 
 const serverMhs = new Server({routers: {
     '/': function(req, res) {
