@@ -4,10 +4,10 @@ on:
   push:
     branches:
       - master  # default branch
-    paths:
-      - "benchmark/**"
-      - ".github/workflows/pages.yml"
-      - "package.json"
+    paths-ignore:
+      - 'docs/**'
+      - '**.md'
+      - 'test/**'
 
 jobs:
   benchmark:
