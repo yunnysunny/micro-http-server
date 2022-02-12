@@ -1,4 +1,17 @@
-# 简单 http 服务
+# micro-http-server
+
+[![build status][action-image]][action-url]
+[![GitHub license](https://img.shields.io/github/license/yunnysunny/micro-http-server)](https://github.com/yunnysunny/micro-http-server)
+[![node version][node-image]][node-url]
+
+[npm-url]: https://npmjs.org/package/@yunnysunny/micro-http-server
+[action-image]: https://github.com/yunnysunny/micro-http-server/workflows/CI/badge.svg
+[action-url]: https://github.com/yunnysunny/micro-http-server/actions/workflows/ci.yml
+
+[node-image]: https://img.shields.io/badge/node.js-%3E=_12-green.svg?style=flat-square
+[node-url]: http://nodejs.org/download/
+
+[![NPM](https://nodei.co/npm/micro-http-server.png?downloads=true)](https://nodei.co/npm/micro-http-server/) 
 
 在使用 Node 来构建微服务程序时，发现性能比较差。当时我们的程序是基于 Express 框架开发的，为了做对比测试，我们使用纯 Node 开发了一个 Hello World 程序，然后跟 Express 的 Hello World 做对比，发现 Express 对于性能的损耗确实比较大。但是脱离 Express 来构建我们的服务代码，还是比较不方便的，为此我们开发了这个项目，力求在实现简单的 GET / POST 请求处理能力的基础上保持程序的高性能。
 
