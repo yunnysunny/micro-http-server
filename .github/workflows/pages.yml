@@ -33,13 +33,14 @@ jobs:
         run: yarn install
       - name: Benchmark framework ${{ matrix.framework }}
         run: |
-          mkdir -p /tmp/result/ /tmp/output/ /tmp/reporter/
+          mkdir -p /tmp/reporter/
           nohup node benchmark/frameworks/${{ matrix.framework }}.js  > nohup.log &
 
           PWD=`pwd`
           docker run --name bench --rm --network=host \
           -v ${PWD}/benchmark/jmeter/http.jmx:/config/http.jmx \
           -v ${PWD}/benchmark/jmeter/entrypoint.sh:/entrypoint.sh \
+          -v /tmp/reporter:/tmp/reporter \
           -e FRAMEWORK=${{ matrix.framework }} \
           yunnysunny/jmeter:latest
 

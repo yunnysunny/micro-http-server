@@ -1,7 +1,7 @@
 #!/bin/bash
-
+mkdir -p /tmp/result/ /tmp/output/
 JMETER="/opt/apache-jmeter-5.4.1/bin/jmeter.sh"
-RESULT=/tmp/result/result.jtl
+RESULT=/tmp/result/${FRAMEWORK}-result.jtl
 HTML=/tmp/reporter/
 PARAM_BENCH="-n -t /config/http.jmx \
 -l  ${RESULT} \
@@ -9,6 +9,6 @@ PARAM_BENCH="-n -t /config/http.jmx \
 echo run "$PARAM_BENCH"
 $JMETER $PARAM_BENCH
 
-$JMETER -g $RESULT -e -o $HTML
+$JMETER -g "$RESULT" -e -o $HTML
 ls $HTML
 echo generate html finished
