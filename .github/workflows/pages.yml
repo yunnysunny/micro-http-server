@@ -50,7 +50,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: result-${{ matrix.framework }}
-          path: /tmp/reporter
+          path: /tmp/reporter/${{ matrix.framework }}
 
   pages:
     needs: benchmark
