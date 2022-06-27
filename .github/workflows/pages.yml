@@ -16,8 +16,14 @@ jobs:
   benchmark:
     runs-on: self-hosted
     strategy:
-      matrix:
-        framework: ["native", "mhs", "koa", "express"]
+      matrix:        
+        include:
+          - framework: native
+          - framework: mhs
+          - framework: koa
+          - framework: express
+          - framework: nestjs
+            install-deps-separated: 1
     steps:
       - uses: actions/checkout@v2
       - name: Use Node.js 16.x
@@ -34,9 +40,15 @@ jobs:
       - name: Install Dependencies
         run: yarn install
       - name: Benchmark framework ${{ matrix.framework }}
+        env: 
+          INSTALL_DEPS_SEPARATED: ${{ matrix.install-deps-separated }}
         run: |
           mkdir -p /tmp/reporter/
-          nohup node benchmark/frameworks/${{ matrix.framework }}.js  > nohup.log &
+          if [ "${INSTALL_DEPS_SEPARATED}" = "1" ] ; then
+            cd ${{ matrix.framework }} && yarn && yarn build && yarn run
+          else
+            nohup node benchmark/frameworks/${{ matrix.framework }}.js  > nohup.log &
+          fi
 
           PWD=`pwd`
           docker run --name bench --rm --network=host \
