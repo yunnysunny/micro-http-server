@@ -45,7 +45,7 @@ jobs:
         run: |
           mkdir -p /tmp/reporter/
           if [ "${INSTALL_DEPS_SEPARATED}" = "1" ] ; then
-            cd ${{ matrix.framework }} && yarn && yarn build && yarn run
+            cd ${{ matrix.framework }} && yarn && yarn build && yarn start:back
           else
             nohup node benchmark/frameworks/${{ matrix.framework }}.js  > nohup.log &
           fi
