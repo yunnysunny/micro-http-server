@@ -49,7 +49,8 @@ jobs:
             && yarn install \
             && yarn global add @nestjs/cli \
             && export PATH=node_modules/.bin:${PATH} \
-            && yarn build && yarn start:back
+            && yarn build && yarn start:back \
+            && cd ../../../
           else
             nohup node benchmark/frameworks/${{ matrix.framework }}.js  > nohup.log &
           fi
