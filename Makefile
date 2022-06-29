@@ -9,6 +9,6 @@ run-no-dep:
 run-with-dep: 
 	cd benchmark/frameworks/$(FRAMEWORK) \
 	&& yarn install \
-	&& yarn build && yarn start:back 
+	&& yarn start:back 
 
 .PHONY: check run-no-dep run-with-dep
