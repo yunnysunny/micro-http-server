@@ -32,12 +32,7 @@ jobs:
         with:
           node-version: '16'
       - name: Setup yarn
-        run: npm install -g yarn
-      - name: Cache NPM dependencies
-        uses: actions/cache@v3
-        with:
-          path: node_modules
-          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/yarn.lock') }}          
+        run: npm install -g yarn     
       - name: Install Dependencies
         run: yarn install
       - name: Benchmark framework ${{ matrix.framework }}
