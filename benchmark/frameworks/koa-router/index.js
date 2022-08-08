@@ -1,7 +1,7 @@
 const Koa = require('koa');
 const Router = require('@koa/router');
 const http = require('http');
-const setup = require('../util/server_setup');
+const setup = require('../../util/server_setup');
 const app = new Koa();
 const router = new Router();
 const port = Number(process.env.LISTEN_PORT) || 3001;

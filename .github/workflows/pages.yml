@@ -22,6 +22,7 @@ jobs:
           - framework: mhs
           - framework: koa
           - framework: koa-router
+            install-deps-separated: 1
           - framework: express
           - framework: nestjs
             install-deps-separated: 1
@@ -31,8 +32,6 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '16'
-      - name: Setup yarn
-        run: npm install -g yarn     
       - name: Install Dependencies
         run: yarn install
       - name: Benchmark framework ${{ matrix.framework }}
