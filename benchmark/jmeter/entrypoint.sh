@@ -7,6 +7,8 @@ PARAM_BENCH="-n -t /config/http.jmx \
 -l  ${RESULT} \
 -e -o /tmp/output/"
 echo run "$PARAM_BENCH"
+rm -rf $RESULT
+rm -rf $HTML
 $JMETER $PARAM_BENCH
 
 $JMETER -g "$RESULT" -e -o "$HTML"
