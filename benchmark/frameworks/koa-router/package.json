@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start:back": "node index.js"
+    "start:back": "nohup node index.js > nohup.log &"
   },
   "dependencies": {
     "@koa/router": "^12.0.0",
