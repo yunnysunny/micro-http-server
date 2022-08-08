@@ -21,6 +21,7 @@ jobs:
           - framework: native
           - framework: mhs
           - framework: koa
+          - framework: koa-router
           - framework: express
           - framework: nestjs
             install-deps-separated: 1
