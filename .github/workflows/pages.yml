@@ -62,7 +62,7 @@ jobs:
 
   pages:
     needs: benchmark
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
       # - uses: actions/download-artifact@v2
       #   with:
