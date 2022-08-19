@@ -11,6 +11,7 @@ on:
 env:
   NODE_ENV: production
   LOG_LEVEL: warn
+  GOMAXPROCS: 1
 
 jobs:
   benchmark:
@@ -26,6 +27,8 @@ jobs:
           - framework: express
           - framework: nestjs
             install-deps-separated: 1
+          - framework: fasthttp
+            golang: 1
     steps:
       - uses: actions/checkout@v3
       - name: Use Node.js 16.x
@@ -38,10 +41,13 @@ jobs:
         env: 
           INSTALL_DEPS_SEPARATED: ${{ matrix.install-deps-separated }}
           FRAMEWORK: ${{ matrix.framework }}
+          BUILD_WITH_GOLANG: ${{ matrix.golang }}
         run: |
           mkdir -p /tmp/reporter/
           if [ "${INSTALL_DEPS_SEPARATED}" = "1" ] ; then
             make run-with-dep
+          elif [ "${BUILD_WITH_GOLANG}" = "1" ] ; then
+            make run-with-golang
           else
             make run-no-dep
           fi
@@ -59,11 +65,18 @@ jobs:
         with:
           name: result-${{ matrix.framework }}
           path: /tmp/reporter/${{ matrix.framework }}
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: /tmp/reporter
+          allow_empty_commit: true
+          keep_files: true
 
-  pages:
-    needs: benchmark
-    runs-on: self-hosted
-    steps:
+  # pages:
+  #   needs: benchmark
+  #   runs-on: self-hosted
+  #   steps:
       # - uses: actions/download-artifact@v2
       #   with:
       #     name: result-native
@@ -84,9 +97,9 @@ jobs:
       #   with:
       #     name: result-nestjs
       #     path: /tmp/reporter/nestjs
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: /tmp/reporter
-          allow_empty_commit: true
+      # - name: Deploy
+      #   uses: peaceiris/actions-gh-pages@v3
+      #   with:
+      #     github_token: ${{ secrets.GITHUB_TOKEN }}
+      #     publish_dir: /tmp/reporter
+      #     allow_empty_commit: true

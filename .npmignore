@@ -1,0 +1,8 @@
+.vscode
+.github
+benchmark
+jmeter
+*.log
+*.out
+*.exe
+*-test
