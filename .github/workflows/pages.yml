@@ -17,6 +17,7 @@ jobs:
   benchmark:
     runs-on: self-hosted
     strategy:
+      fail-fast: false
       matrix:        
         include:
           - framework: native
@@ -29,6 +30,18 @@ jobs:
             install-deps-separated: 1
           - framework: fasthttp
             golang: 1
+          - framework: beego
+            golang: 1
+          - framework: echo
+            golang: 1
+          - framework: fiber
+            golang: 1
+          - framework: gin
+            golang: 1
+          - framework: golang-koa
+            golang: 1
+          - framework: fastify
+            install-deps-separated: 1
     steps:
       - uses: actions/checkout@v3
       - name: Use Node.js 16.x
