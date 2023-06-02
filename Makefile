@@ -11,7 +11,8 @@ run-with-dep:check
 	&& yarn install \
 	&& yarn start:back 
 run-with-golang:check
-	cd benchmark/frameworks/$(FRAMEWORK) \
+	export GOMAXPROCS=1 \
+	&& cd benchmark/frameworks/$(FRAMEWORK) \
 	&& go build \
 	&& nohup ./$(FRAMEWORK)-test > nohup.log &
 
