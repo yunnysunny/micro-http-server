@@ -53,7 +53,9 @@ jobs:
         with:
           go-version: 1.17
       - name: Install Dependencies
-        run: yarn install
+        run: |
+          npm install yarn -g
+          yarn install
       - name: Benchmark framework ${{ matrix.framework }}
         env: 
           INSTALL_DEPS_SEPARATED: ${{ matrix.install-deps-separated }}
