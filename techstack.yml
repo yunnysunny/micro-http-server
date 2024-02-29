@@ -1,0 +1,1017 @@
+repo_name: yunnysunny/micro-http-server
+report_id: b1154f71866882e3be0b3807fe6825ec
+version: 0.1
+repo_type: Public
+timestamp: '2024-02-29T19:55:32+00:00'
+requested_by: yunnysunny
+provider: github
+branch: master
+detected_tools_count: 72
+tools:
+- name: Golang
+  description: An open source programming language that makes it easy to build simple,
+    reliable, and efficient software
+  website_url: http://golang.org/
+  license: BSD-3-Clause
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/1005/O6AczwfV_400x400.png
+  detection_source_url: https://github.com/yunnysunny/micro-http-server
+  detection_source: Repo Metadata
+- name: JavaScript
+  description: Lightweight, interpreted, object-oriented language with first-class
+    functions
+  website_url: https://developer.mozilla.org/en-US/docs/Web/JavaScript
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/1209/javascript.jpeg
+  detection_source_url: https://github.com/yunnysunny/micro-http-server
+  detection_source: Repo Metadata
+- name: TypeScript
+  description: A superset of JavaScript that compiles to clean JavaScript output
+  website_url: http://www.typescriptlang.org
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/1612/bynNY5dJ.jpg
+  detection_source_url: https://github.com/yunnysunny/micro-http-server
+  detection_source: Repo Metadata
+- name: Echo
+  description: High performance, extensible, minimalist Go web framework
+  website_url: https://echo.labstack.com
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Microframeworks (Backend)
+  image_url: https://img.stackshare.io/service/4996/9P0MlumU_400x400.jpg
+  detection_source_url: https://github.com/yunnysunny/micro-http-server/blob/master/benchmark/frameworks/echo/go.mod
+  detection_source: benchmark/frameworks/echo/go.mod
+  last_updated_by: yunnysunny
+  last_updated_on: 2022-08-20 11:27:55.000000000 Z
+- name: ExpressJS
+  description: Sinatra inspired web development framework for node.js -- insanely
+    fast, flexible, and simple
+  website_url: http://expressjs.com/
+  version: 4.18.1
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Microframeworks (Backend)
+  image_url: https://img.stackshare.io/service/1163/hashtag.png
+  detection_source_url: https://github.com/yunnysunny/micro-http-server/blob/master/benchmark/frameworks/nestjs/yarn.lock
+  detection_source: benchmark/frameworks/nestjs/package.json
+  last_updated_by: yunnysunny
+  last_updated_on: 2022-06-27 12:06:29.000000000 Z
+- name: Fastify
+  description: Fast and low overhead web framework, for Node.js
+  website_url: http://www.fastify.io/
+  version: 4.5.2
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Microframeworks (Backend)
+  image_url: https://img.stackshare.io/service/7609/24939410.png
+  detection_source_url: https://github.com/yunnysunny/micro-http-server/blob/master/benchmark/frameworks/fastify/yarn.lock
+  detection_source: benchmark/frameworks/fastify/package.json
+  last_updated_by: yunnysunny
+  last_updated_on: 2022-08-20 11:27:55.000000000 Z
+- name: Gin Gonic
+  description: HTTP web framework written in Go
+  website_url: https://gin-gonic.com/
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Frameworks (Full Stack)
+  image_url: https://img.stackshare.io/service/4221/7894478.png
+  detection_source_url: https://github.com/yunnysunny/micro-http-server/blob/master/benchmark/frameworks/gin/go.mod
+  detection_source: benchmark/frameworks/gin/go.mod
+  last_updated_by: yunnysunny
+  last_updated_on: 2022-08-20 11:27:55.000000000 Z
+- name: Koa
+  description: Next generation web framework for node.js
+  website_url: http://koajs.com/
+  version: 2.13.4
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Microframeworks (Backend)
+  image_url: https://img.stackshare.io/service/1726/5055057.png
+  detection_source_url: https://github.com/yunnysunny/micro-http-server/blob/master/benchmark/frameworks/koa-router/yarn.lock
+  detection_source: benchmark/frameworks/koa-router/package.json
+  last_updated_by: yunnysunny
+  last_updated_on: 2022-08-08 08:46:09.000000000 Z
+- name: NestJS
+  description: A progressive Node.js framework for building efficient and scalable
+    server-side applications by @kammysliwiec.
+  website_url: nestjs.com
+  version: 8.4.5
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Frameworks (Full Stack)
+  image_url: https://img.stackshare.io/service/8747/4zsOyxko_400x400.jpg
+  detection_source_url: https://github.com/yunnysunny/micro-http-server/blob/master/benchmark/frameworks/nestjs/yarn.lock
+  detection_source: benchmark/frameworks/nestjs/package.json
+  last_updated_by: yunnysunny
+  last_updated_on: 2022-06-27 12:06:29.000000000 Z
+- name: Node.js
+  description: A platform built on Chrome's JavaScript runtime for easily building
+    fast, scalable network applications
+  website_url: http://nodejs.org/
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Frameworks (Full Stack)
+  image_url: https://img.stackshare.io/service/1011/n1JRsFeB_400x400.png
+  detection_source_url: https://github.com/yunnysunny/micro-http-server/blob/master/benchmark/frameworks/nestjs/package.json
+  detection_source: benchmark/frameworks/nestjs/package.json
+  last_updated_by: yunnysunny
+  last_updated_on: 2022-06-27 12:06:29.000000000 Z
+- name: Protobuf
+  description: Google's data interchange format
+  website_url: https://developers.google.com/protocol-buffers/
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Serialization Frameworks
+  image_url: https://img.stackshare.io/service/4393/ma2jqJKH_400x400.png
+  detection_source_url: https://github.com/yunnysunny/micro-http-server/blob/master/benchmark/frameworks/beego/go.mod
+  detection_source: benchmark/frameworks/beego/go.mod
+  last_updated_by: yunnysunny
+  last_updated_on: 2022-08-20 11:27:55.000000000 Z
+- name: RxJS
+  description: The Reactive Extensions for JavaScript
+  website_url: http://reactivex.io/rxjs/
+  version: 6.6.7
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Concurrency Frameworks
+  image_url: https://img.stackshare.io/service/1796/984368.png
+  detection_source_url: https://github.com/yunnysunny/micro-http-server/blob/master/benchmark/frameworks/nestjs/yarn.lock
+  detection_source: benchmark/frameworks/nestjs/package.json
+  last_updated_by: yunnysunny
+  last_updated_on: 2022-06-27 12:06:29.000000000 Z
+- name: Chai
+  description: A BDD / TDD assertion library
+  website_url: http://chaijs.com/
+  version: 4.3.4
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Javascript Testing Framework
+  image_url: https://img.stackshare.io/service/1725/chai.png
+  detection_source_url: https://github.com/yunnysunny/micro-http-server/blob/master/yarn.lock
+  detection_source: package.json
+  last_updated_by: yunnysunny
+  last_updated_on: 2022-02-11 05:35:19.000000000 Z
+- name: ESLint
+  description: The fully pluggable JavaScript code quality tool
+  website_url: http://eslint.org/
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Code Review
+  image_url: https://img.stackshare.io/service/3337/Q4L7Jncy.jpg
+  detection_source_url: https://github.com/yunnysunny/micro-http-server/blob/master/benchmark/frameworks/nestjs/package.json
+  detection_source: benchmark/frameworks/nestjs/package.json
+  last_updated_by: yunnysunny
+  last_updated_on: 2022-06-27 12:06:29.000000000 Z
+- name: Git
+  description: Fast, scalable, distributed revision control system
+  website_url: http://git-scm.com/
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Version Control System
+  image_url: https://img.stackshare.io/service/1046/git.png
+  detection_source_url: https://github.com/yunnysunny/micro-http-server
+  detection_source: Repo Metadata
+- name: GitHub Actions
+  description: Automate your workflow from idea to production
+  website_url: https://github.com/features/actions
+  open_source: false
+  hosted_saas: true
+  category: Build, Test, Deploy
+  sub_category: Continuous Integration
+  image_url: https://img.stackshare.io/service/11563/actions.png
+  detection_source_url: https://github.com/yunnysunny/micro-http-server/blob/master/.github/workflows/ci.yml
+  detection_source: ".github/workflows/ci.yml"
+  last_updated_by: yunnysunny
+  last_updated_on: 2022-02-11 05:35:19.000000000 Z
+- name: Jest
+  description: Painless JavaScript Unit Testing
+  website_url: http://facebook.github.io/jest/
+  version: 27.5.1
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Javascript Testing Framework
+  image_url: https://img.stackshare.io/service/830/jest.png
+  detection_source_url: https://github.com/yunnysunny/micro-http-server/blob/master/benchmark/frameworks/nestjs/yarn.lock
+  detection_source: benchmark/frameworks/nestjs/package.json
+  last_updated_by: yunnysunny
+  last_updated_on: 2022-06-27 12:06:29.000000000 Z
+- name: Mocha
+  description: Simple, flexible, fun javascript test framework for node.js &amp; the
+    browser
+  website_url: http://mochajs.org/
+  version: 9.0.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Javascript Testing Framework
+  image_url: https://img.stackshare.io/service/832/mocha.png
+  detection_source_url: https://github.com/yunnysunny/micro-http-server/blob/master/yarn.lock
+  detection_source: package.json
+  last_updated_by: yunnysunny
+  last_updated_on: 2022-02-11 05:35:19.000000000 Z
+- name: Prettier
+  description: Prettier is an opinionated code formatter.
+  website_url: https://prettier.io/
+  version: 2.6.2
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Code Review
+  image_url: https://img.stackshare.io/service/7035/default_66f265943abed56bcdbfca1c866a4261b1fbb063.jpg
+  detection_source_url: https://github.com/yunnysunny/micro-http-server/blob/master/benchmark/frameworks/nestjs/yarn.lock
+  detection_source: benchmark/frameworks/nestjs/package.json
+  last_updated_by: yunnysunny
+  last_updated_on: 2022-06-27 12:06:29.000000000 Z
+- name: Prometheus
+  description: An open-source service monitoring system and time series database,
+    developed by SoundCloud
+  website_url: http://prometheus.io/
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Monitoring
+  sub_category: Monitoring Tools
+  image_url: https://img.stackshare.io/service/2501/default_3cf1b307194b26782be5cb209d30360580ae5b3c.png
+  detection_source_url: https://github.com/yunnysunny/micro-http-server/blob/master/benchmark/frameworks/beego/go.mod
+  detection_source: benchmark/frameworks/beego/go.mod
+  last_updated_by: yunnysunny
+  last_updated_on: 2022-08-20 11:27:55.000000000 Z
+- name: SuperTest
+  description: A library for testing node.js HTTP servers
+  website_url: https://www.npmjs.com/package/supertest
+  version: 6.2.3
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Javascript Testing Framework
+  image_url: https://img.stackshare.io/no-img-open-source.png
+  detection_source_url: https://github.com/yunnysunny/micro-http-server/blob/master/benchmark/frameworks/nestjs/yarn.lock
+  detection_source: benchmark/frameworks/nestjs/package.json
+  last_updated_by: yunnysunny
+  last_updated_on: 2022-06-27 12:06:29.000000000 Z
+- name: Yarn
+  description: A new package manager for JavaScript
+  website_url: https://yarnpkg.com/
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Front End Package Manager
+  image_url: https://img.stackshare.io/service/5848/44mC-kJ3.jpg
+  detection_source_url: https://github.com/yunnysunny/micro-http-server/blob/master/benchmark/frameworks/fastify/yarn.lock
+  detection_source: benchmark/frameworks/fastify/yarn.lock
+  last_updated_by: yunnysunny
+  last_updated_on: 2022-08-20 11:27:55.000000000 Z
+- name: npm
+  description: The package manager for JavaScript.
+  website_url: https://www.npmjs.com/
+  open_source: false
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Front End Package Manager
+  image_url: https://img.stackshare.io/service/1120/lejvzrnlpb308aftn31u.png
+  detection_source_url: https://github.com/yunnysunny/micro-http-server/blob/master/package.json
+  detection_source: package.json
+  last_updated_by: yunnysunny
+  last_updated_on: 2022-02-11 05:35:19.000000000 Z
+- name: Shell
+  description: A shell is a text-based terminal, used for manipulating programs and
+    files. Shell scripts typically manage program execution.
+  website_url: https://en.wikipedia.org/wiki/Shell_script
+  open_source: false
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/4631/default_c2062d40130562bdc836c13dbca02d318205a962.png
+  detection_source_url: https://github.com/yunnysunny/micro-http-server
+  detection_source: Repo Metadata
+- name: ansicolor
+  description: Ansicolor library provides color console in Windows as ANSICON for
+    Golang
+  package_url: https://pkg.go.dev/github.com/shiena/ansicolor
+  version: 0.0.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Go Modules Packages
+  image_url: https://img.stackshare.io/package/go-packages/image.png
+  detection_source_url: https://github.com/yunnysunny/micro-http-server/blob/master/benchmark/frameworks/beego/go.sum
+  detection_source: benchmark/frameworks/beego/go.mod
+  last_updated_by: yunnysunny
+  last_updated_on: 2022-08-20 11:27:55.000000000 Z
+- name: bytebufferpool
+  description: Anti-memory-waste byte buffer pool
+  package_url: https://pkg.go.dev/github.com/valyala/bytebufferpool
+  version: 1.0.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Go Modules Packages
+  image_url: https://img.stackshare.io/package/go-packages/image.png
+  detection_source_url: https://github.com/yunnysunny/micro-http-server/blob/master/benchmark/frameworks/echo/go.sum
+  detection_source: benchmark/frameworks/echo/go.mod
+  last_updated_by: yunnysunny
+  last_updated_on: 2022-08-20 11:27:55.000000000 Z
+- name: client_model
+  description: Data model artifacts for Prometheus
+  package_url: https://pkg.go.dev/github.com/prometheus/client_model
+  version: 0.0.0
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Go Modules Packages
+  image_url: https://img.stackshare.io/package/go-packages/image.png
+  detection_source_url: https://github.com/yunnysunny/micro-http-server/blob/master/benchmark/frameworks/beego/go.sum
+  detection_source: benchmark/frameworks/beego/go.mod
+  last_updated_by: yunnysunny
+  last_updated_on: 2022-08-20 11:27:55.000000000 Z
+- name: codec
+  description: Idiomatic codec and rpc lib for msgpack, cbor, json, etc
+  package_url: https://pkg.go.dev/github.com/ugorji/go/codec
+  version: 1.2.7
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Go Modules Packages
+  image_url: https://img.stackshare.io/package/go-packages/image.png
+  detection_source_url: https://github.com/yunnysunny/micro-http-server/blob/master/benchmark/frameworks/gin/go.sum
+  detection_source: benchmark/frameworks/gin/go.mod
+  last_updated_by: yunnysunny
+  last_updated_on: 2022-08-20 11:27:55.000000000 Z
+- name: common
+  description: Go libraries shared across Prometheus components and libraries
+  package_url: https://pkg.go.dev/github.com/prometheus/common
+  version: 0.4.1
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Go Modules Packages
+  image_url: https://img.stackshare.io/package/go-packages/image.png
+  detection_source_url: https://github.com/yunnysunny/micro-http-server/blob/master/benchmark/frameworks/beego/go.sum
+  detection_source: benchmark/frameworks/beego/go.mod
+  last_updated_by: yunnysunny
+  last_updated_on: 2022-08-20 11:27:55.000000000 Z
+- name: compress
+  description: Optimized compression packages
+  package_url: https://pkg.go.dev/github.com/klauspost/compress
+  version: 1.15.0
+  license: BSD-3-Clause
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Go Modules Packages
+  image_url: https://img.stackshare.io/package/go-packages/image.png
+  detection_source_url: https://github.com/yunnysunny/micro-http-server/blob/master/benchmark/frameworks/fasthttp/go.sum
+  detection_source: benchmark/frameworks/fasthttp/go.mod
+  last_updated_by: yunnysunny
+  last_updated_on: 2022-08-19 11:26:36.000000000 Z
+- name: crypto
+  description: Go supplementary cryptography libraries
+  package_url: https://pkg.go.dev/golang.org/x/crypto
+  version: 0.0.0
+  license: BSD-3-Clause
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Go Modules Packages
+  image_url: https://img.stackshare.io/package/go-packages/image.png
+  detection_source_url: https://github.com/yunnysunny/micro-http-server/blob/master/benchmark/frameworks/beego/go.sum
+  detection_source: benchmark/frameworks/beego/go.mod
+  last_updated_by: yunnysunny
+  last_updated_on: 2022-08-20 11:27:55.000000000 Z
+  vulnerabilities:
+  - name: Improper Verification of Cryptographic Signature in golang.org/x/crypto
+    cve_id: CVE-2020-9283
+    cve_url: https://github.com/advisories/GHSA-ffhg-7mh4-33c4
+    detected_date: Aug 22
+    severity: moderate
+    first_patched: 0.0.0-20200220183623-bac4c82f6975
+- name: errors
+  description: Simple error handling primitives
+  package_url: https://pkg.go.dev/github.com/pkg/errors
+  version: 0.8.0
+  license: BSD-2-Clause
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Go Modules Packages
+  image_url: https://img.stackshare.io/package/go-packages/image.png
+  detection_source_url: https://github.com/yunnysunny/micro-http-server/blob/master/benchmark/frameworks/beego/go.sum
+  detection_source: benchmark/frameworks/beego/go.mod
+  last_updated_by: yunnysunny
+  last_updated_on: 2022-08-20 11:27:55.000000000 Z
+- name: fasthttp
+  description: Fast HTTP package for Go
+  package_url: https://pkg.go.dev/github.com/valyala/fasthttp
+  version: 1.39.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Go Modules Packages
+  image_url: https://img.stackshare.io/package/go-packages/image.png
+  detection_source_url: https://github.com/yunnysunny/micro-http-server/blob/master/benchmark/frameworks/fasthttp/go.sum
+  detection_source: benchmark/frameworks/fasthttp/go.mod
+  last_updated_by: yunnysunny
+  last_updated_on: 2022-08-19 11:26:36.000000000 Z
+- name: fasttemplate
+  description: Simple and fast template engine for Go
+  package_url: https://pkg.go.dev/github.com/valyala/fasttemplate
+  version: 1.2.1
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Go Modules Packages
+  image_url: https://img.stackshare.io/package/go-packages/image.png
+  detection_source_url: https://github.com/yunnysunny/micro-http-server/blob/master/benchmark/frameworks/echo/go.sum
+  detection_source: benchmark/frameworks/echo/go.mod
+  last_updated_by: yunnysunny
+  last_updated_on: 2022-08-20 11:27:55.000000000 Z
+- name: gin
+  description: Gin is a HTTP web framework written in Go
+  package_url: https://pkg.go.dev/github.com/gin-gonic/gin
+  version: 1.8.1
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Go Modules Packages
+  image_url: https://img.stackshare.io/package/go-packages/image.png
+  detection_source_url: https://github.com/yunnysunny/micro-http-server/blob/master/benchmark/frameworks/gin/go.sum
+  detection_source: benchmark/frameworks/gin/go.mod
+  last_updated_by: yunnysunny
+  last_updated_on: 2022-08-20 11:27:55.000000000 Z
+- name: go-colorable
+  description: Go-colorable Colorable writer for windows
+  package_url: https://pkg.go.dev/github.com/mattn/go-colorable
+  version: 0.1.11
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Go Modules Packages
+  image_url: https://img.stackshare.io/package/go-packages/image.png
+  detection_source_url: https://github.com/yunnysunny/micro-http-server/blob/master/benchmark/frameworks/echo/go.sum
+  detection_source: benchmark/frameworks/echo/go.mod
+  last_updated_by: yunnysunny
+  last_updated_on: 2022-08-20 11:27:55.000000000 Z
+- name: go-isatty
+  description: Package isatty implements interface to isatty
+  package_url: https://pkg.go.dev/github.com/mattn/go-isatty
+  version: 0.0.14
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Go Modules Packages
+  image_url: https://img.stackshare.io/package/go-packages/image.png
+  detection_source_url: https://github.com/yunnysunny/micro-http-server/blob/master/benchmark/frameworks/echo/go.sum
+  detection_source: benchmark/frameworks/echo/go.mod
+  last_updated_by: yunnysunny
+  last_updated_on: 2022-08-20 11:27:55.000000000 Z
+- name: golang-lru
+  description: Golang LRU cache
+  package_url: https://pkg.go.dev/github.com/hashicorp/golang-lru
+  version: 0.5.0
+  license: MPL-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Go Modules Packages
+  image_url: https://img.stackshare.io/package/go-packages/image.png
+  detection_source_url: https://github.com/yunnysunny/micro-http-server/blob/master/benchmark/frameworks/beego/go.sum
+  detection_source: benchmark/frameworks/beego/go.mod
+  last_updated_by: yunnysunny
+  last_updated_on: 2022-08-20 11:27:55.000000000 Z
+- name: golang_protobuf_extensions
+  description: Support for streaming Protocol Buffer messages for the Go language
+  package_url: https://pkg.go.dev/github.com/matttproud/golang_protobuf_extensions
+  version: 1.0.1
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Go Modules Packages
+  image_url: https://img.stackshare.io/package/go-packages/image.png
+  detection_source_url: https://github.com/yunnysunny/micro-http-server/blob/master/benchmark/frameworks/beego/go.sum
+  detection_source: benchmark/frameworks/beego/go.mod
+  last_updated_by: yunnysunny
+  last_updated_on: 2022-08-20 11:27:55.000000000 Z
+- name: gommon
+  description: Common packages for Go
+  package_url: https://pkg.go.dev/github.com/labstack/gommon
+  version: 0.3.1
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Go Modules Packages
+  image_url: https://img.stackshare.io/package/go-packages/image.png
+  detection_source_url: https://github.com/yunnysunny/micro-http-server/blob/master/benchmark/frameworks/echo/go.sum
+  detection_source: benchmark/frameworks/echo/go.mod
+  last_updated_by: yunnysunny
+  last_updated_on: 2022-08-20 11:27:55.000000000 Z
+- name: json-iterator/go
+  description: A high-performance 100% compatible drop-in replacement of "encoding/json"
+  package_url: https://pkg.go.dev/github.com/json-iterator/go
+  version: 1.1.6
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Go Modules Packages
+  image_url: https://img.stackshare.io/package/go-packages/image.png
+  detection_source_url: https://github.com/yunnysunny/micro-http-server/blob/master/benchmark/frameworks/beego/go.sum
+  detection_source: benchmark/frameworks/gin/go.mod
+  last_updated_by: yunnysunny
+  last_updated_on: 2022-08-20 11:27:55.000000000 Z
+- name: locales
+  description: ":earth_americas: a set of locales generated from the CLDR Project
+    which can be used independently or within an i18n package; these were built for
+    use with"
+  package_url: https://pkg.go.dev/github.com/go-playground/locales
+  version: 0.14.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Go Modules Packages
+  image_url: https://img.stackshare.io/package/go-packages/image.png
+  detection_source_url: https://github.com/yunnysunny/micro-http-server/blob/master/benchmark/frameworks/gin/go.sum
+  detection_source: benchmark/frameworks/gin/go.mod
+  last_updated_by: yunnysunny
+  last_updated_on: 2022-08-20 11:27:55.000000000 Z
+- name: mapstructure
+  description: Go library for decoding generic map values into native Go structures
+  package_url: https://pkg.go.dev/github.com/mitchellh/mapstructure
+  version: 1.4.3
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Go Modules Packages
+  image_url: https://img.stackshare.io/package/go-packages/image.png
+  detection_source_url: https://github.com/yunnysunny/micro-http-server/blob/master/benchmark/frameworks/beego/go.sum
+  detection_source: benchmark/frameworks/beego/go.mod
+  last_updated_by: yunnysunny
+  last_updated_on: 2022-08-20 11:27:55.000000000 Z
+- name: net
+  description: Go supplementary network libraries
+  package_url: https://pkg.go.dev/golang.org/x/net
+  version: 0.0.0
+  license: BSD-3-Clause
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Go Modules Packages
+  image_url: https://img.stackshare.io/package/go-packages/image.png
+  detection_source_url: https://github.com/yunnysunny/micro-http-server/blob/master/benchmark/frameworks/beego/go.sum
+  detection_source: benchmark/frameworks/beego/go.mod
+  last_updated_by: yunnysunny
+  last_updated_on: 2022-08-20 11:27:55.000000000 Z
+- name: perks
+  description: Effective Computation of Things
+  package_url: https://pkg.go.dev/github.com/beorn7/perks
+  version: 0.0.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Go Modules Packages
+  image_url: https://img.stackshare.io/package/go-packages/image.png
+  detection_source_url: https://github.com/yunnysunny/micro-http-server/blob/master/benchmark/frameworks/beego/go.sum
+  detection_source: benchmark/frameworks/beego/go.mod
+  last_updated_by: yunnysunny
+  last_updated_on: 2022-08-20 11:27:55.000000000 Z
+- name: procfs
+  description: Procfs provides functions to retrieve system
+  package_url: https://pkg.go.dev/github.com/prometheus/procfs
+  version: 0.0.0
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Go Modules Packages
+  image_url: https://img.stackshare.io/package/go-packages/image.png
+  detection_source_url: https://github.com/yunnysunny/micro-http-server/blob/master/benchmark/frameworks/beego/go.sum
+  detection_source: benchmark/frameworks/beego/go.mod
+  last_updated_by: yunnysunny
+  last_updated_on: 2022-08-20 11:27:55.000000000 Z
+- name: proto
+  description: Go support for Google's protocol buffers
+  package_url: https://pkg.go.dev/github.com/golang/protobuf/proto
+  license: BSD-3-Clause
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Go Modules Packages
+  image_url: https://img.stackshare.io/package/go-packages/image.png
+  detection_source_url: https://github.com/yunnysunny/micro-http-server/blob/master/benchmark/frameworks/beego/go.mod
+  detection_source: benchmark/frameworks/beego/go.mod
+  last_updated_by: yunnysunny
+  last_updated_on: 2022-08-20 11:27:55.000000000 Z
+- name: reflect2
+  description: Reflect api without runtime reflect.Value cost
+  package_url: https://pkg.go.dev/github.com/modern-go/reflect2
+  version: 0.0.0
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Go Modules Packages
+  image_url: https://img.stackshare.io/package/go-packages/image.png
+  detection_source_url: https://github.com/yunnysunny/micro-http-server/blob/master/benchmark/frameworks/beego/go.sum
+  detection_source: benchmark/frameworks/gin/go.mod
+  last_updated_by: yunnysunny
+  last_updated_on: 2022-08-20 11:27:55.000000000 Z
+- name: sys
+  description: Go packages for low-level interaction with the operating system
+  package_url: https://pkg.go.dev/golang.org/x/sys
+  version: 0.0.0
+  license: BSD-3-Clause
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Go Modules Packages
+  image_url: https://img.stackshare.io/package/go-packages/image.png
+  detection_source_url: https://github.com/yunnysunny/micro-http-server/blob/master/benchmark/frameworks/beego/go.sum
+  detection_source: benchmark/frameworks/beego/go.mod
+  last_updated_by: yunnysunny
+  last_updated_on: 2022-08-20 11:27:55.000000000 Z
+- name: tcplisten
+  description: Customizable TCP net.Listener for Go
+  package_url: https://pkg.go.dev/github.com/valyala/tcplisten
+  version: 1.0.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Go Modules Packages
+  image_url: https://img.stackshare.io/package/go-packages/image.png
+  detection_source_url: https://github.com/yunnysunny/micro-http-server/blob/master/benchmark/frameworks/fasthttp/go.sum
+  detection_source: benchmark/frameworks/fiber/go.mod
+  last_updated_by: yunnysunny
+  last_updated_on: 2022-08-20 11:27:55.000000000 Z
+- name: text
+  description: Go text processing support
+  package_url: https://pkg.go.dev/golang.org/x/text
+  version: 0.0.0
+  license: BSD-3-Clause
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Go Modules Packages
+  image_url: https://img.stackshare.io/package/go-packages/image.png
+  detection_source_url: https://github.com/yunnysunny/micro-http-server/blob/master/benchmark/frameworks/beego/go.sum
+  detection_source: benchmark/frameworks/beego/go.mod
+  last_updated_by: yunnysunny
+  last_updated_on: 2022-08-20 11:27:55.000000000 Z
+- name: universal-translator
+  description: ":speech_balloon: i18n Translator for Go/Golang using CLDR data + pluralization
+    rules"
+  package_url: https://pkg.go.dev/github.com/go-playground/universal-translator
+  version: 0.18.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Go Modules Packages
+  image_url: https://img.stackshare.io/package/go-packages/image.png
+  detection_source_url: https://github.com/yunnysunny/micro-http-server/blob/master/benchmark/frameworks/gin/go.sum
+  detection_source: benchmark/frameworks/gin/go.mod
+  last_updated_by: yunnysunny
+  last_updated_on: 2022-08-20 11:27:55.000000000 Z
+- name: yaml.v2
+  description: YAML support for the Go language
+  package_url: https://pkg.go.dev/gopkg.in/yaml.v2
+  version: 2.2.1
+  license: LGPL-3.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Go Modules Packages
+  image_url: https://img.stackshare.io/package/go-packages/image.png
+  detection_source_url: https://github.com/yunnysunny/micro-http-server/blob/master/benchmark/frameworks/beego/go.sum
+  detection_source: benchmark/frameworks/beego/go.mod
+  last_updated_by: yunnysunny
+  last_updated_on: 2022-08-20 11:27:55.000000000 Z
+  vulnerabilities:
+  - name: Excessive Platform Resource Consumption within a Loop in Kubernetes
+    cve_id: CVE-2019-11254
+    cve_url: https://github.com/advisories/GHSA-wxc4-f4m6-wwqv
+    detected_date: Jan 28
+    severity: moderate
+    first_patched: 2.2.8
+- name: "@nestjs/common"
+  description: Nest - modern
+  package_url: https://www.npmjs.com/@nestjs/common
+  version: 8.4.5
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16950/default_ebf16e0c8af5e95030933d9e01479224b6665289.png
+  detection_source_url: https://github.com/yunnysunny/micro-http-server/blob/master/benchmark/frameworks/nestjs/yarn.lock
+  detection_source: benchmark/frameworks/nestjs/package.json
+  last_updated_by: yunnysunny
+  last_updated_on: 2022-06-27 12:06:29.000000000 Z
+- name: "@nestjs/core"
+  description: Nest - modern, fast, powerful node.js web framework
+  package_url: https://www.npmjs.com/@nestjs/core
+  version: 8.4.5
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/17223/default_48f040bdc5f6c639c70bf350f8b8158ede27286c.png
+  detection_source_url: https://github.com/yunnysunny/micro-http-server/blob/master/benchmark/frameworks/nestjs/yarn.lock
+  detection_source: benchmark/frameworks/nestjs/package.json
+  last_updated_by: yunnysunny
+  last_updated_on: 2022-06-27 12:06:29.000000000 Z
+  vulnerabilities:
+  - name: "@nestjs/core vulnerable to Information Exposure via StreamableFile pipe"
+    cve_id: CVE-2023-26108
+    cve_url: https://github.com/advisories/GHSA-4jpv-8r57-pv7j
+    detected_date: Mar 8
+    severity: moderate
+    first_patched: 9.0.5
+- name: "@nestjs/testing"
+  description: Nest - modern
+  package_url: https://www.npmjs.com/@nestjs/testing
+  version: 8.4.5
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/17855/default_dc034f75f103514d23b4d1a7fe578415d63216ee.png
+  detection_source_url: https://github.com/yunnysunny/micro-http-server/blob/master/benchmark/frameworks/nestjs/yarn.lock
+  detection_source: benchmark/frameworks/nestjs/package.json
+  last_updated_by: yunnysunny
+  last_updated_on: 2022-06-27 12:06:29.000000000 Z
+- name: "@types/express"
+  description: TypeScript definitions for Express
+  package_url: https://www.npmjs.com/@types/express
+  version: 4.17.13
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16100/default_d947c1690e032a288145c7e2491999eab3ea8ede.png
+  detection_source_url: https://github.com/yunnysunny/micro-http-server/blob/master/benchmark/frameworks/nestjs/yarn.lock
+  detection_source: benchmark/frameworks/nestjs/package.json
+  last_updated_by: yunnysunny
+  last_updated_on: 2022-06-28 12:13:39.000000000 Z
+- name: "@types/jest"
+  description: TypeScript definitions for Jest
+  package_url: https://www.npmjs.com/@types/jest
+  version: 27.4.1
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15840/default_004658cda9b38934f2871435e9dc15608c86e8be.png
+  detection_source_url: https://github.com/yunnysunny/micro-http-server/blob/master/benchmark/frameworks/nestjs/yarn.lock
+  detection_source: benchmark/frameworks/nestjs/package.json
+  last_updated_by: yunnysunny
+  last_updated_on: 2022-06-28 12:13:39.000000000 Z
+- name: "@types/node"
+  description: TypeScript definitions for Node.js
+  package_url: https://www.npmjs.com/@types/node
+  version: 17.0.36
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15809/default_5e5e8ac63beda29f31f1844df64d4b8247570a66.png
+  detection_source_url: https://github.com/yunnysunny/micro-http-server/blob/master/benchmark/frameworks/nestjs/yarn.lock
+  detection_source: benchmark/frameworks/nestjs/package.json
+  last_updated_by: yunnysunny
+  last_updated_on: 2022-06-28 12:13:39.000000000 Z
+- name: "@types/supertest"
+  description: TypeScript definitions for SuperTest
+  package_url: https://www.npmjs.com/@types/supertest
+  version: 2.0.12
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16805/default_31a4e0e11d348225088320f3a5c5ea6fa49c27ad.png
+  detection_source_url: https://github.com/yunnysunny/micro-http-server/blob/master/benchmark/frameworks/nestjs/yarn.lock
+  detection_source: benchmark/frameworks/nestjs/package.json
+  last_updated_by: yunnysunny
+  last_updated_on: 2022-06-28 12:13:39.000000000 Z
+- name: "@typescript-eslint/eslint-plugin"
+  description: TypeScript plugin for ESLint
+  package_url: https://www.npmjs.com/@typescript-eslint/eslint-plugin
+  version: 5.27.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15982/default_8b5680d4e916298d08363c291a0d6e34c07ceb15.png
+  detection_source_url: https://github.com/yunnysunny/micro-http-server/blob/master/benchmark/frameworks/nestjs/yarn.lock
+  detection_source: benchmark/frameworks/nestjs/package.json
+  last_updated_by: yunnysunny
+  last_updated_on: 2022-06-28 12:13:39.000000000 Z
+- name: "@typescript-eslint/parser"
+  description: An ESLint custom parser which leverages TypeScript ESTree
+  package_url: https://www.npmjs.com/@typescript-eslint/parser
+  version: 5.27.0
+  license: BSD-2-Clause
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15980/default_732016a20524708efe7a4c77497fe9bfeea19ba6.png
+  detection_source_url: https://github.com/yunnysunny/micro-http-server/blob/master/benchmark/frameworks/nestjs/yarn.lock
+  detection_source: benchmark/frameworks/nestjs/package.json
+  last_updated_by: yunnysunny
+  last_updated_on: 2022-06-28 12:13:39.000000000 Z
+- name: eslint-config-prettier
+  description: Turns off all rules that are unnecessary or might conflict with Prettier
+  package_url: https://www.npmjs.com/eslint-config-prettier
+  version: 8.5.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15879/default_0b10af8ca19c215f781dc07442e75bdc831089d0.png
+  detection_source_url: https://github.com/yunnysunny/micro-http-server/blob/master/benchmark/frameworks/nestjs/yarn.lock
+  detection_source: benchmark/frameworks/nestjs/package.json
+  last_updated_by: yunnysunny
+  last_updated_on: 2022-06-27 12:06:29.000000000 Z
+- name: eslint-plugin-prettier
+  description: Runs prettier as an eslint rule
+  package_url: https://www.npmjs.com/eslint-plugin-prettier
+  version: 4.0.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15896/default_6e6e1d6bb189c8bb26c6410618bd597979578f39.png
+  detection_source_url: https://github.com/yunnysunny/micro-http-server/blob/master/benchmark/frameworks/nestjs/yarn.lock
+  detection_source: benchmark/frameworks/nestjs/package.json
+  last_updated_by: yunnysunny
+  last_updated_on: 2022-06-27 12:06:29.000000000 Z
+- name: mime
+  description: A comprehensive library for mime-type mapping
+  package_url: https://www.npmjs.com/mime
+  version: 1.6.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16182/default_ac04a744873b460c4ef30a7450ed0c83223640ab.png
+  detection_source_url: https://github.com/yunnysunny/micro-http-server/blob/master/benchmark/frameworks/nestjs/yarn.lock
+  detection_source: package.json
+  last_updated_by: yunnysunny
+  last_updated_on: 2022-02-11 05:35:19.000000000 Z
+- name: reflect-metadata
+  description: Polyfill for Metadata Reflection API
+  package_url: https://www.npmjs.com/reflect-metadata
+  version: 0.1.13
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16019/default_7a88bebb451873cc63bd99007de5bd3bb8ef85de.png
+  detection_source_url: https://github.com/yunnysunny/micro-http-server/blob/master/benchmark/frameworks/nestjs/yarn.lock
+  detection_source: benchmark/frameworks/nestjs/package.json
+  last_updated_by: yunnysunny
+  last_updated_on: 2022-06-27 12:06:29.000000000 Z
+- name: rimraf
+  description: A deep deletion module for node
+  package_url: https://www.npmjs.com/rimraf
+  version: 3.0.2
+  license: ISC
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15807/default_db4a7791d2f1174547374b9b587bc10fec088a5a.png
+  detection_source_url: https://github.com/yunnysunny/micro-http-server/blob/master/benchmark/frameworks/nestjs/yarn.lock
+  detection_source: benchmark/frameworks/nestjs/package.json
+  last_updated_by: yunnysunny
+  last_updated_on: 2022-06-27 12:06:29.000000000 Z
+- name: source-map-support
+  description: Fixes stack traces for files with source maps
+  package_url: https://www.npmjs.com/source-map-support
+  version: 0.5.21
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16028/default_c7b204838197013798409fa2b4dafce450edc7fb.png
+  detection_source_url: https://github.com/yunnysunny/micro-http-server/blob/master/benchmark/frameworks/nestjs/yarn.lock
+  detection_source: benchmark/frameworks/nestjs/package.json
+  last_updated_by: yunnysunny
+  last_updated_on: 2022-06-27 12:06:29.000000000 Z
+- name: ts-jest
+  description: A preprocessor with source maps support to help use TypeScript with
+    Jest
+  package_url: https://www.npmjs.com/ts-jest
+  version: 27.1.5
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15864/default_6743ba96cf149a3c3c68a185199f9705d6eff80e.png
+  detection_source_url: https://github.com/yunnysunny/micro-http-server/blob/master/benchmark/frameworks/nestjs/yarn.lock
+  detection_source: benchmark/frameworks/nestjs/package.json
+  last_updated_by: yunnysunny
+  last_updated_on: 2022-06-27 12:06:29.000000000 Z
+- name: ts-loader
+  description: TypeScript loader for webpack
+  package_url: https://www.npmjs.com/ts-loader
+  version: 9.3.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15938/default_e0a4fb1126d7400f419f0931cf1669947a5bc552.png
+  detection_source_url: https://github.com/yunnysunny/micro-http-server/blob/master/benchmark/frameworks/nestjs/yarn.lock
+  detection_source: benchmark/frameworks/nestjs/package.json
+  last_updated_by: yunnysunny
+  last_updated_on: 2022-06-27 12:06:29.000000000 Z
+- name: ts-node
+  description: TypeScript execution environment and REPL for node.js
+  package_url: https://www.npmjs.com/ts-node
+  version: 10.8.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15830/default_6743ba96cf149a3c3c68a185199f9705d6eff80e.png
+  detection_source_url: https://github.com/yunnysunny/micro-http-server/blob/master/benchmark/frameworks/nestjs/yarn.lock
+  detection_source: benchmark/frameworks/nestjs/package.json
+  last_updated_by: yunnysunny
+  last_updated_on: 2022-06-28 12:13:39.000000000 Z
+- name: tsconfig-paths
+  description: Load node modules according to tsconfig paths
+  package_url: https://www.npmjs.com/tsconfig-paths
+  version: 3.14.1
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16810/default_55e3ea76a7929df1b71c5ea0c9b4130cc87323a4.png
+  detection_source_url: https://github.com/yunnysunny/micro-http-server/blob/master/benchmark/frameworks/nestjs/yarn.lock
+  detection_source: benchmark/frameworks/nestjs/package.json
+  last_updated_by: yunnysunny
+  last_updated_on: 2022-06-27 12:06:29.000000000 Z
