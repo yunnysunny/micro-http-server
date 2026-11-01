@@ -53,14 +53,14 @@ jobs:
             install-deps-separated: 1
     steps:
       - uses: actions/checkout@v4
-      - name: Use Node.js 16.x
+      - name: Use Node.js 24.x
         uses: actions/setup-node@v4
         with:
-          node-version: '16'
+          node-version: '24'
       - name: Set up Go
         uses: actions/setup-go@v5
         with:
-          go-version: '1.17'
+          go-version: '1.27'
           # 仓库里有十几个独立 go.mod，setup-go 的依赖缓存探测容易报警，直接关掉
           cache: false
       - name: Install Dependencies
