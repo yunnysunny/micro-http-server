@@ -8,17 +8,26 @@ on:
       - 'docs/**'
       - '**.md'
       - 'test/**'
+  workflow_dispatch:
+
 env:
   NODE_ENV: production
   LOG_LEVEL: warn
   GOMAXPROCS: 1
 
+# peaceiris/actions-gh-pages 需要写仓库内容的权限；
+# 新仓库的 GITHUB_TOKEN 默认只读，缺这一段 Deploy 会 403
+permissions:
+  contents: write
+
 jobs:
   benchmark:
-    runs-on: self-hosted
+    # 想切回自建机器时把下面这行改成 self-hosted
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
     strategy:
       fail-fast: false
-      matrix:        
+      matrix:
         include:
           - framework: native
           - framework: mhs
@@ -43,22 +52,24 @@ jobs:
           - framework: fastify
             install-deps-separated: 1
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Use Node.js 16.x
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: '16'
       - name: Set up Go
-        uses: actions/setup-go@v3
+        uses: actions/setup-go@v5
         with:
-          go-version: 1.17
+          go-version: '1.17'
+          # 仓库里有十几个独立 go.mod，setup-go 的依赖缓存探测容易报警，直接关掉
+          cache: false
       - name: Install Dependencies
         run: |
-          sudo apt-get install make -y
+          command -v make >/dev/null || { sudo apt-get update -qq && sudo apt-get install -y make; }
           npm install yarn -g
           yarn install
       - name: Benchmark framework ${{ matrix.framework }}
-        env: 
+        env:
           INSTALL_DEPS_SEPARATED: ${{ matrix.install-deps-separated }}
           FRAMEWORK: ${{ matrix.framework }}
           BUILD_WITH_GOLANG: ${{ matrix.golang }}
@@ -72,6 +83,25 @@ jobs:
             make run-no-dep
           fi
 
+          # 服务是用 nohup 后台起的（Go 那组连 go build 都在后台），
+          # 等端口真的能连上再开压，否则前几秒全是 connection refused，
+          # 报告里的错误率会失真；起不来就直接失败，别把废数据发到 gh-pages
+          READY=0
+          for i in $(seq 1 120); do
+            if curl -sf -o /dev/null http://127.0.0.1:3001/ ; then
+              READY=1
+              echo "server ready after ${i}s"
+              break
+            fi
+            sleep 1
+          done
+          if [ "${READY}" != "1" ] ; then
+            echo "::error::framework ${{ matrix.framework }} 的测试服务 120 秒内没起来"
+            tail -n 50 nohup.log 2>/dev/null || true
+            tail -n 50 benchmark/frameworks/*/nohup.log 2>/dev/null || true
+            exit 1
+          fi
+
           PWD=`pwd`
           docker run --name bench --rm --network=host \
           -v ${PWD}/benchmark/jmeter/http.jmx:/config/http.jmx \
@@ -81,45 +111,40 @@ jobs:
           yunnysunny/jmeter:latest
 
       - name: Upload result of ${{ matrix.framework }}
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: result-${{ matrix.framework }}
           path: /tmp/reporter/${{ matrix.framework }}
+          if-no-files-found: warn
+
+  deploy:
+    needs: benchmark
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download all results
+        uses: actions/download-artifact@v4
+        with:
+          pattern: result-*
+          path: /tmp/raw
+
+      # download-artifact@v4 会把每个 artifact 解到以 artifact 名命名的子目录里，
+      # 这里摊平回 /tmp/reporter/<framework> 的原结构
+      - name: Flatten results
+        run: |
+          mkdir -p /tmp/reporter
+          for d in /tmp/raw/result-* ; do
+            [ -d "${d}" ] || continue
+            fw="${d##*/result-}"
+            mkdir -p "/tmp/reporter/${fw}"
+            cp -a "${d}/." "/tmp/reporter/${fw}/"
+          done
+          find /tmp/reporter -maxdepth 2 -type f | head -20
+
       - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
+        uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: /tmp/reporter
           allow_empty_commit: true
           keep_files: true
-
-  # pages:
-  #   needs: benchmark
-  #   runs-on: self-hosted
-  #   steps:
-      # - uses: actions/download-artifact@v2
-      #   with:
-      #     name: result-native
-      #     path: /tmp/reporter/native
-      # - uses: actions/download-artifact@v2
-      #   with:
-      #     name: result-mhs
-      #     path: /tmp/reporter/mhs
-      # - uses: actions/download-artifact@v2
-      #   with:
-      #     name: result-koa
-      #     path: /tmp/reporter/koa
-      # - uses: actions/download-artifact@v2
-      #   with:
-      #     name: result-express
-      #     path: /tmp/reporter/express
-      # - uses: actions/download-artifact@v2
-      #   with:
-      #     name: result-nestjs
-      #     path: /tmp/reporter/nestjs
-      # - name: Deploy
-      #   uses: peaceiris/actions-gh-pages@v3
-      #   with:
-      #     github_token: ${{ secrets.GITHUB_TOKEN }}
-      #     publish_dir: /tmp/reporter
-      #     allow_empty_commit: true
