@@ -187,7 +187,7 @@ $(document).ready(function() {
     }, [[0, 0]], 3);
 
     // Create statistics table
-    createTable($("#statisticsTable"), {"supportsControllersDiscrimination": true, "overall": {"data": ["Total", 4120151, 0, 0.0, 0.2761607523607964, 0, 43, 0.0, 1.0, 1.0, 1.0, 13739.10332294046, 2361.4083836303917, 1569.799891390658], "isController": false}, "titles": ["Label", "#Samples", "FAIL", "Error %", "Average", "Min", "Max", "Median", "90th pct", "95th pct", "99th pct", "Transactions/s", "Received", "Sent"], "items": [{"data": ["HTTP Request", 4120151, 0, 0.0, 0.2761607523607964, 0, 43, 0.0, 1.0, 1.0, 1.0, 13739.10332294046, 2361.4083836303917, 1569.799891390658], "isController": false}]}, function(index, item){
+    createTable($("#statisticsTable"), {"supportsControllersDiscrimination": true, "overall": {"data": ["Total", 8616714, 0, 0.0, 0.12913623453210096, 0, 26, 0.0, 1.0, 1.0, 1.0, 28731.19089854222, 4938.173435686944, 3282.763022587343], "isController": false}, "titles": ["Label", "#Samples", "FAIL", "Error %", "Average", "Min", "Max", "Median", "90th pct", "95th pct", "99th pct", "Transactions/s", "Received", "Sent"], "items": [{"data": ["HTTP Request", 8616714, 0, 0.0, 0.12913623453210096, 0, 26, 0.0, 1.0, 1.0, 1.0, 28731.19089854222, 4938.173435686944, 3282.763022587343], "isController": false}]}, function(index, item){
         switch(index){
             // Errors pct
             case 3:
@@ -228,7 +228,7 @@ $(document).ready(function() {
     }, [[1, 1]]);
 
         // Create top5 errors by sampler
-    createTable($("#top5ErrorsBySamplerTable"), {"supportsControllersDiscrimination": false, "overall": {"data": ["Total", 4120151, 0, null, null, null, null, null, null, null, null, null, null], "isController": false}, "titles": ["Sample", "#Samples", "#Errors", "Error", "#Errors", "Error", "#Errors", "Error", "#Errors", "Error", "#Errors", "Error", "#Errors"], "items": [{"data": [], "isController": false}]}, function(index, item){
+    createTable($("#top5ErrorsBySamplerTable"), {"supportsControllersDiscrimination": false, "overall": {"data": ["Total", 8616714, 0, null, null, null, null, null, null, null, null, null, null], "isController": false}, "titles": ["Sample", "#Samples", "#Errors", "Error", "#Errors", "Error", "#Errors", "Error", "#Errors", "Error", "#Errors", "Error", "#Errors"], "items": [{"data": [], "isController": false}]}, function(index, item){
         return item;
     }, [[0, 0]], 0);
 
